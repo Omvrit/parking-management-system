@@ -5,8 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
-    android:background="@color/white"
+    android:background="@drawable/backdround"
     tools:context=".SignupActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/signupUserName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/logo"
+            app:layout_constraintBottom_toTopOf="@+id/signupUserName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.548" />
+
+    </androidx.cardview.widget.CardView>
 
     <EditText
         android:id="@+id/signupUserName"
@@ -16,9 +37,11 @@
         android:layout_marginTop="272dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/edittext_border"
+        android:backgroundTint="#E1CBFD"
         android:hint="Username"
         android:textColor="@color/black"
         android:padding="12dp"
+        android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,6 +55,8 @@
         android:layout_marginTop="340dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/edittext_border"
+        android:textColorHint="@color/black"
+        android:backgroundTint="#E1CBFD"
         android:hint="Email"
         android:textColor="@color/black"
         android:padding="12dp"
@@ -48,7 +73,9 @@
         android:layout_marginTop="412dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/edittext_border"
+        android:backgroundTint="#E1CBFD"
         android:hint="Password"
+        android:textColorHint="@color/black"
         android:textColor="@color/black"
         android:inputType="textPassword"
         android:padding="12dp"
@@ -61,8 +88,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:id="@+id/signupButton"
+        android:textColor="@color/black"
         android:text="SIGNUP"
-        android:backgroundTint="@color/green"
+        android:backgroundTint="#E1CBFD"
         android:layout_marginTop="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
@@ -72,13 +100,14 @@
         app:layout_constraintTop_toBottomOf="@+id/signupPassword"/>
 
     <TextView
-        android:layout_width="0dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:id="@+id/loginRedirect"
         android:text="Already registered? Login"
         android:textSize="18sp"
         android:gravity="center"
-        android:textColor="@color/green"
+        android:background="#E1CBFD"
+        android:textColor="@color/black"
         android:layout_marginTop="70dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
