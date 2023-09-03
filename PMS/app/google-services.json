@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "615025610068",
+    "project_id": "parking-management-syste-db2e2",
+    "storage_bucket": "parking-management-syste-db2e2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:615025610068:android:441ea5ed1edd8462dc8cc1",
+        "android_client_info": {
+          "package_name": "com.example.parkingmanagementsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "615025610068-t6m5jig8vs1tbgtgik0vhi6rvvp5r206.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWNF9pegCIuSKZAgM9J7V0Ys414uNiMEk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "615025610068-t6m5jig8vs1tbgtgik0vhi6rvvp5r206.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
