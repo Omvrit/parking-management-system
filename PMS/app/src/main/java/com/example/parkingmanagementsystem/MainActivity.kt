@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.bottom_map -> {
-                    replaceFragment(MapFragment())
+                    replaceFragment(MapsFragment())
                     true
                 }
                 R.id.bottom_booking -> {

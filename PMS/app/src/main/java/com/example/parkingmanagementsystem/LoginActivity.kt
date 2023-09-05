@@ -1,6 +1,7 @@
 package com.example.parkingmanagementsystem
 
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -13,22 +14,40 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
 class LoginActivity : AppCompatActivity() {
+    companion object {
+        const val SHARED_PREFS = "shared_prefs"
+        const val EMAIL_KEY = "email_key"
+        const val PASSWORD_KEY = "password_key"
+    }
     private lateinit var binding: ActivityLoginBinding
     private lateinit var firebaseDatabase: FirebaseDatabase
     private lateinit var databaseReference: DatabaseReference
+    private lateinit var sharedPreferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE)
+        val email = sharedPreferences.getString(EMAIL_KEY, null)
+        val password = sharedPreferences.getString(PASSWORD_KEY, null)
+
+        if (email != null && password != null) {
+            startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+            finish()
+        }
+
 
         firebaseDatabase = FirebaseDatabase.getInstance()
         databaseReference = firebaseDatabase.reference.child("users")
 
 
+
+
         binding.loginButton.setOnClickListener {
             val loginUserEmail = binding.loginUserEmail.text.toString()
             val loginPassword = binding.loginPassword.text.toString()
+
 
             if(loginUserEmail.isNotEmpty() && loginPassword.isNotEmpty()){
                 loginUser(loginUserEmail, loginPassword)
